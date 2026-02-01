@@ -5,6 +5,7 @@ import StudentInfo from './Bai1/components/StudentInfo';
 import Footer from './Bai1/components/Footer';
 import CounterApp from './Bai2/CounterApp';
 import Forminfo from './Bai3/FormInfo';
+import StatusBadge from './Bai4/components/StatusBadge';
 
 function App() {
   const student = {
@@ -13,7 +14,7 @@ function App() {
     lop:"DHKTPM19B"
   };
 
-
+  const [status, setStatus] = useState("");
   return (
     <>
         {/* <Header/>
@@ -22,9 +23,18 @@ function App() {
         mssv={student.mssv}
         lop={student.lop}/>
         <Footer/> */}
+        {/* <Forminfo/> */}
+        
       {/* <CounterApp/> */}
 
-      <Forminfo/>
+
+     {/* <button className='btn' onClick={()=> {setStatus("blue")}}>Online</button>
+     <button className='btn' onClick={()=> {setStatus("gray")}}>Offline</button>
+     <button className='btn' onClick={()=> {setStatus("red")}}>Busy</button>
+
+     <StatusBadge status={status}/> */}
+
+
 
     </>
   )
