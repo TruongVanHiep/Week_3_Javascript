@@ -4,6 +4,7 @@ import Header from './Bai1/components/Header';
 import StudentInfo from './Bai1/components/StudentInfo';
 import Footer from './Bai1/components/Footer';
 import CounterApp from './Bai2/CounterApp';
+import Forminfo from './Bai3/FormInfo';
 
 function App() {
   const student = {
@@ -21,7 +22,9 @@ function App() {
         mssv={student.mssv}
         lop={student.lop}/>
         <Footer/> */}
-      <CounterApp/>
+      {/* <CounterApp/> */}
+
+      <Forminfo/>
 
     </>
   )
