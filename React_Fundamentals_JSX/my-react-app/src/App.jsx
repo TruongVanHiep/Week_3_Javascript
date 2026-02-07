@@ -19,27 +19,25 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (text) => {
-    if (!text.trim()) return;
+    if(text.trim() === "") return;
 
     const newTodo = {
       id: Date.now(),
       text: text
-    };
+    }
 
     setTodos([...todos, newTodo]);
-  };
-
-  const deleteTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id));
-  };
-
+  }
+  const deleteTodo = (id) =>{
+    setTodos(todos.filter(todo => (todo.id !== id)));
+  }
+ 
   const [status, setStatus] = useState("");
   return (
     <>
-      <h1>Todo App</h1>
+      <h1>ToDoApp</h1>
       <TodoInput addTodo={addTodo}/>
       <TodoList todos={todos} deleteTodo={deleteTodo}/>
-
 
         {/* <Header/>
         <StudentInfo
